@@ -1,0 +1,19 @@
+@use '~@angular/material' as mat;
+
+@include mat.core();
+
+$ui-primary: mat.define-palette(mat.$amber-palette, A100, A200, A400);
+$ui-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+$ui-warn: mat.define-palette(mat.$red-palette);
+
+$ui-theme: mat.define-light-theme((
+  color: (
+    primary: $ui-primary,
+    accent: $ui-accent,
+    warn: $ui-warn,
+  )
+));
+
+@include mat.all-component-themes($ui-theme);
+
+/*.mat-toolbar-row, .mat-toolbar-single-row*/
