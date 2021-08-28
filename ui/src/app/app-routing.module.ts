@@ -1,12 +1,17 @@
-import {RouterModule, Routes} from "@angular/router";
-import {NgModule} from "@angular/core";
-import {MainLayoutComponent} from "./ui/main-layout/main-layout.component";
+import { RouterModule, Routes } from '@angular/router';
+import { NgModule } from '@angular/core';
+import { MainLayoutComponent } from './ui/main-layout/main-layout.component';
 
 const routes: Routes = [
   {
     path: '',
     component: MainLayoutComponent,
-    children: [{ path: '', loadChildren: () => import('./pages/products/products.module').then(m => m.ProductsModule) }],
+    children: [
+      {
+        path: '',
+        loadChildren: () => import('./pages/products/products.module').then(m => m.ProductsModule),
+      },
+    ],
   },
   { path: '**', redirectTo: '/' },
 ];

@@ -1,0 +1,15 @@
+<mat-drawer-container
+  class='app-sidenav'
+  autosize
+>
+  <mat-drawer
+    class='app-sidenav--menu'
+    mode='side'
+    [opened]='hiddenMenu'
+  >
+    <mat-selection-list [multiple]='false'>
+      <app-side-bar-list></app-side-bar-list>
+    </mat-selection-list>
+  </mat-drawer>
+</mat-drawer-container>
+

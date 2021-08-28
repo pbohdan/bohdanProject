@@ -2,18 +2,26 @@
 
 @include mat.core();
 
-$ui-primary: mat.define-palette(mat.$amber-palette, A100, A200, A400);
-$ui-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
-$ui-warn: mat.define-palette(mat.$red-palette);
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+@import "color-theme";
+@import "custom-theme";
 
-$ui-theme: mat.define-light-theme((
+$app-primary: mat.define-palette(mat.$grey-palette, A100, A200, A400);
+$app-accent: mat.define-palette(mat.$grey-palette, A200, A100, A400);
+$app-warn: mat.define-palette(mat.$grey-palette);
+
+$app-theme: mat.define-light-theme((
   color: (
-    primary: $ui-primary,
-    accent: $ui-accent,
-    warn: $ui-warn,
+    primary: $app-primary,
+    accent: $app-accent,
+    warn: $app-warn,
   )
 ));
 
-@include mat.all-component-themes($ui-theme);
+$app-custom-typography: mat.define-typography-config(
+  $font-family: "Poppins, sans-serif",
+);
 
-/*.mat-toolbar-row, .mat-toolbar-single-row*/
+@include custom-theme($app-custom-typography);
+@include mat.all-component-themes($app-theme);
+@include mat.core($app-custom-typography);

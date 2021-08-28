@@ -1,0 +1,15 @@
+.app-sidenav {
+  height: 100%;
+
+  &--menu {
+    width: 14rem;
+
+    .mat-list-option {
+      border-radius: 40px;
+    }
+  }
+
+  &--content {
+    padding: 1rem;
+  }
+}

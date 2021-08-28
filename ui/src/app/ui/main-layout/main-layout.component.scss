@@ -1,7 +1,7 @@
 .main-layout {
   display: grid;
   grid-template-rows: auto 1fr 2.4rem;
-  grid-template-areas: "header" "main" "footer";
+  grid-template-areas: 'header' 'main' 'footer';
   height: 100%;
   overflow-y: hidden;
 

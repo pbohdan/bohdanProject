@@ -1,0 +1,9 @@
+@use '~@angular/material' as mat;
+
+@mixin custom-theme($custom-theme) {
+  .mat-toolbar {
+    position: relative;
+    z-index: 2;
+    @include mat.elevation(1);
+  }
+}
